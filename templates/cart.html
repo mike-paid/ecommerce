@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    
+</style>
+
+{% for cart in allcarts %}
+
+<!-- <div class="wrapper row">
+    
+
+    <div class="cart card flex-row row w-60">
+        <div class="col-md-4">
+
+            <div class="card " style="margin: -10px; object-fit: contain; width: 140px; height: 80px;">
+                <img class="card-img-top" src="/media/{{cart.item_id.image}}" alt="">
+                <hr>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <h4 class="card-title">{{cart.title}}</h4>
+            <p class="card-text">{{cart.price}}</p>
+           
+        </div>
+
+    
+
+    
+   
+</div> -->
+
+<div class="container my-3">
+  
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card d-flex flex-row justify-content-between">
+                <img src="/media/{{cart.item_id.image}}" alt="" style="width: 6rem; height: 6rem; object-fit: contain;">
+                <div>
+                    <p>{{cart.title}}</p>
+                    <div class="d-flex gap-3">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="{{cart.id}}" name="add" hidden>
+                            <button class="btn btn-dark">+</button>
+                        </form>
+                        <p>{{cart.qty}}</p>
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="{{cart.id}}" name="minus" hidden>
+                            <button class="btn btn-danger "><i class="fa-solid fa-trash"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+    {% endfor %}
+
+    {% if auth != None %}
+    <div class="container d-flex justify-content-between">
+        <p id="email" hidden>{{auth.email}}</p>
+        <h2>$ <span id="payamt">{{totalAmount}}</span></h2>
+        <button class="btn btn-md btn-danger " id="pay-btn">pay</button>
+    </div>
+
+    {% else %}
+
+    <a href="/login">Login</a>
+
+    {% endif %}
+
+
+    {% endblock %}

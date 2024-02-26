@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% for message in messages %}
+ 
+ <h5 class="bg-warning text-center my-3 p3" style="padding-top: 15px; padding-bottom: 15px;">{{message}}</h5>
+
+{% endfor %}
+ 
+<form  method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="signup d-flex justify-content-center align-items-center">
+
+    <div class="signup-form ">
+      <h1>signup</h1>
+      <div class="fm">
+        <label for="">First Name</label>
+        <input type="text" name="first_name" class="d-block p-2 mmf" id="" placeholder="First Name">
+      </div>
+
+      <div class="lname">
+        <label for="">Last Name</label>
+        <input type="text" name="last_name" class="d-block p-2 mmf" placeholder="Last Name">
+      </div>
+
+      <div class="eml">
+        <label for="">Email</label>
+        <input type="email" name="email" class="d-block p-2 mmf" placeholder="Email">
+      </div>
+
+      <div class="ph">
+        <label for="">Phone (+234)</label>
+        <input type="tel" name="phone" id="" class="d-block p-2 mmf" placeholder="phone number">
+      </div>
+      <div class="pswd">
+        <div class="">
+          <label for="">Password</label>
+          <input type="password" name="password" id="ps1" class="d-block p-2 mmf" name="" id="" placeholder="Password">
+        </div>
+
+        <div class="">
+          <label for="">Confirm Password</label>
+          <input type="password" class="d-block p-2 mmf" name="re_password" id="ps2" placeholder="Repeat Password">
+        </div>
+       
+        <div class="photo">
+          <input type="file" name="photo">
+        </div>
+
+        <div class="">
+          <input type="checkbox" style="gap: 10px;">
+          <label> Agree to terms and conditions</label>
+        </div>
+
+        <div class="check2">
+          <input type="checkbox"><label> I want to recieve promotional emails</label>
+        </div>
+        <button type="submit">Create account</button>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+{% endblock %}

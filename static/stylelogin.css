@@ -1,0 +1,261 @@
+body{
+   
+   cursor: pointer;
+   overflow-x: hidden;
+}
+
+.logo{
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.navbar-nav{
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   font-weight: bold;
+}
+.img-guy{
+  margin-left: 49%;
+  margin-top: 0%;
+  height: 100vh;
+}
+
+ 
+@media(max-width: 600px){
+  .logo{
+   display: flex;
+   justify-content: space-around;
+   }
+
+   .img-guy{
+   display: flex;
+   margin-left: 0;
+   margin-top: 500%;
+   height: 10vh;
+   }
+.my-txt .h1{
+  margin-top: 10%;
+ position: absolute;
+ font-size: 50px;
+ margin-left: 10%;
+ 
+}
+ 
+.my-txt h2{
+  margin-top: 18%;
+ position: absolute;
+ font-size: 26px;
+ margin-left: 16%;
+ font-weight: bold;
+}
+ 
+.my-txt h3{
+  margin-top: 23%;
+ position: absolute;
+ font-size: 40px;
+ margin-left: 22%;
+}
+
+ 
+
+}
+
+/* --------------------------------
+fade in top
+-------------------------------- */
+
+.my-txt h1{
+  margin-top: 10%;
+ position: absolute;
+ font-size: 70px;
+ margin-left: 10%;
+}
+ 
+.my-txt h2{
+  margin-top: 18%;
+ position: absolute;
+ font-size: 46px;
+ margin-left: 16%;
+ font-weight: bold;
+}
+ 
+.my-txt h3{
+  margin-top: 23%;
+ position: absolute;
+ font-size: 60px;
+ margin-left: 22%;
+}
+
+.card11 img{
+  height: 35vh;
+  transition: .5s;
+  overflow: hidden;
+}
+.card11 img:hover{
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+hr{
+  font-weight: bolder;
+}
+ 
+ 
+ 
+ 
+
+.log button{
+  background-color: #9bb6f7;
+  font-size: 23px;
+ 
+  width: 20rem;
+  border-radius: 10px;
+  border: 2px solid black;
+ transition: .5s;
+
+}
+
+.log button:hover{
+  background-color: black;
+  color: #f2f6ff;
+  border: #fff;
+}
+ 
+
+@keyframes float{
+  25%{
+   transform: translateX(10px);
+  }
+  50%{
+   transform: translateX(-30px );
+  }
+  75%{
+   transform: translateX(10px);
+  }
+  100%{
+   transform: translateX( -30px);
+  }
+}
+
+.frm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(234, 247, 255);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px 3px rgb(63, 60, 60) ;
+}
+
+.frm h1, h2{
+  display: flex;
+ 
+ 
+ 
+}
+
+h1, h2{
+  text-align: center;
+}
+
+.mwmw{
+  object-fit: contain; 
+  animation-name: float;
+  animation-duration: 14s;
+  animation-iteration-count: infinite;
+
+
+}
+
+/* 
+---------------------------------
+end fade in top
+--------------------------------- */
+
+
+
+/* --------------
+signup
+-------------- */
+.signup h1{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: poppins, 'san-serif';
+}
+
+.signup{
+  display: block;
+  background-color: #f4f6fc;
+ font-size: 1.2em;
+ align-items: center;
+
+ 
+}
+.signup input{
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.signup input:focus{
+  border: none;
+  outline: none;
+  box-shadow: 0 0 20px #999;
+}
+.signup input{
+  border-radius: 10px;
+ 
+
+}
+
+.signup-form div{
+  margin: 1rem 0;
+}
+
+.signup input[type='checkbox']{
+  width: 1rem;
+}
+ 
+.signup-form{
+  background-color: rgb(228, 221, 250);
+ padding-bottom: 30px;
+ padding-left: 30px;
+ padding-right: 30px;
+  margin: 20px ;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #999;
+}
+@media (max-width: 600px){
+.signup button{
+    background-color: #9bb6f7;
+    padding: 10px 80px;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    font-weight: bold;
+   transition: .5s;
+  
+  }
+}
+
+.signup button{
+  background-color: #9bb6f7;
+  padding: 10px 100px;
+  border: 2px solid #fff;
+  border-radius: 9px;
+  font-weight: bold;
+ transition: .5s;
+
+}
+.signup button:hover{
+  background-color: #999;
+  border: 2px solid #789df3;
+}
+
+/* -------------
+end signup
+-----------=-- */
+/* 
+/* 
+--------------
+alert
+----------------

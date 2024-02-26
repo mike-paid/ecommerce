@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+{% for message in messages %}
+ 
+   <div class="alert alert-{{messages.tags}} bg-warning w-50 m-auto alert-dismissible fade show" role="alert">
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     <strong>{{ message}}</strong> 
+   </div>
+   
+   <script>
+     var alertList = document.querySelectorAll('.alert');
+     alertList.forEach(function (alert) {
+       new bootstrap.Alert(alert)
+     })
+   </script>
+   
+
+{%endfor%}
+<form action=""  method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'images/ggg.png' %}" alt="" class="mwmw d-block m-auto">
+        </div>
+        <div class="col-md-6 frm">
+             <div class="">
+                        <h1>Welcome Back !</h1>
+                        <p>Please proceed to your account</p>
+                        <div class="form1 p-3">
+                            <div class="email">
+                                <label for="">Email</label>
+                                <input name="email" type="email" style="display: block;">
+                            </div>
+
+                            <div class="password">
+                                <label for="">Password</label>
+                                <input type="password" name="password" id="" style="display: block;" >
+                            </div>
+                        </div>
+                        <div class="opt">
+                            <p>don't have an account ? <a href="/signup">signup</a></p>
+                        </div> 
+                                                <div class="log">
+                            <button type="submit">login</button>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</form>
+{% endblock %}

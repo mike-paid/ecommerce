@@ -1,0 +1,35 @@
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'stylelogin.css' %}">
+</head>
+<body >
+
+   
+    <form action="for-control">
+       
+        <h1 style="text-align: center;">welcome</h1>
+
+        <div class="email">
+             <label for="Name" >Name</label>
+            <input style="background: transparent; border: none; outline: none;"
+             type="text" required>
+        </div>
+        <div class="email" style="width: 280px; margin: 0px 40px; border-bottom: 2px solid white; padding: 0px 30px;">
+             <label for="Name" style="display: block;">password</label>
+            <input style="background: transparent; border: none; outline: none;"
+             type="text" required>
+        </div>
+
+
+    </form>
+
+
+</body>
+</html> -->

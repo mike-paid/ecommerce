@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="my-txt">
+    <h1 data-aos="fade-right" data-aos-duration="1000">welcome</h1>
+    <h2 data-aos="fade-left" data-aos-duration="2000">To The World Of</h2>
+    
+    <h3 data-aos="fade-up" data-aos-duration="3000">ECOMMERCE</h3>
+</div>
+<img src="{% static 'images/login.jpg' %}" alt="" class="img-guy">
+
+<div class="wrapper container" style="background-color: rgba(251, 249, 255, 0.966); box-shadow: 0 0 10px #999; margin-top: 30px; margin-bottom: 20px;">
+  
+<h1>Men's clothing</h1>
+<hr style="color: red; font-weight: bolder; height: 10px;">
+<div class="row">
+
+    {% for product in products %}
+
+ 
+    <div class="col-md-4">
+        <div class="card card11 ">
+  <div class="wrapper">
+    <img src="media/{{product.image}}" alt="">
+  </div>
+            <div class="card-body" style="background-color: #c3c2f1;">
+             <p style="font-weight: bold;">{{ product.title }}</p>
+            </div>
+            <div class="card-footer" style="background-color: #D7855F;">
+                <p>{{ product.price }}</p>
+               <div class="d-flex justify-content-between">
+                <p style="max-width: 180px;">{{ product.description }}</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="text" value="{{product.title}}" name="product_title" hidden>
+                    <input type="text" value="{{product.price}}" name="product_price" hidden>
+                    <input type="text" value="{{product.id}}" name="product_id" hidden>
+                    <button  class="btn ">
+                        <span><a href="/cart"><i class="fa-solid fa-cart-plus" style="text-decoration: none; font-size: 2.1rem; "></i></a></span>
+                    </div>
+                     
+                    </button>
+                  
+                </form>
+              
+            </div>
+        </div>
+    </div> 
+
+    {% endfor %}
+
+   
+</div>
+</div>
+{% endblock %}
